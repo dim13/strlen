@@ -7,6 +7,6 @@ import (
 
 func main() {
 	for _, a := range os.Args[1:] {
-		fmt.Println(len(a), a)
+		fmt.Printf("%3d %v\n", len(a), a)
 	}
 }
