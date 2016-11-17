@@ -5,8 +5,14 @@ import (
 	"os"
 )
 
+type Len string
+
+func (l Len) String() string {
+	return fmt.Sprintf("%3d %s", len(l), string(l))
+}
+
 func main() {
 	for _, a := range os.Args[1:] {
-		fmt.Printf("%3d %v\n", len(a), a)
+		fmt.Println(Len(a))
 	}
 }
